@@ -1,0 +1,134 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  /* TYPOGRAPHY */
+  --HEADING-FONT: 'Quattrocento Sans', sans-serif;
+  --BODY-FONT: 'Montserrat', sans-serif;
+  --SMALL-TEXT-SIZE: 0.7em;
+  --TEXT-COLOUR: var(--GREY-900);
+
+  /* COLOURS */
+  /* Primary Colours */
+  --PRIMARY-100: #dbddec;
+  --PRIMARY-200: #b7bbda;
+  --PRIMARY-300: #9299c7;
+  --PRIMARY-400: #6e77b5;
+  --PRIMARY-500: #4a55a2;
+  --PRIMARY-600: #3b4482;
+  --PRIMARY-700: #2c3361;
+  --PRIMARY-800: #1e2241;
+  --PRIMARY-900: #0f1120;
+  --BLACK: #222;
+
+  /* Shades of grey */
+  --GREY-50: #f8fafc;
+  --GREY-100: #f1f5f9;
+  --GREY-200: #e2e8f0;
+  --GREY-300: #cbd5e1;
+  --GREY-400: #94a3b8;
+  --GREY-500: #64748b;
+  --GREY-600: #475569;
+  --GREY-700: #334155;
+  --GREY-800: #1e293b;
+  --GREY-900: #1e293b;
+
+  /* Other colours */
+  --WHITE: #fff;
+  --RED-LIGHT: #f8d7da;
+  --RED-DARK: #842029;
+  --GREEN-LIGHT: #d1e7dd;
+  --GREEN-DARK: #0d653c;
+
+  /* OTHER VARIABLES */
+  --BACKGROUND-COLOUR: var(--GREY-50);
+  --BORDER-RADIUS: 0.25rem;
+  --LETTER-SPACING: 1px;
+  --TRANSITION: 0.3s ease-in-out all;
+  --MAX-WIDTH: 1120px;
+
+  /* Can change based on project, for example, when we want multiple images, cards or some other components with the same size */
+  --FIXED-WIDTH: 600px;
+
+  /* Box-shadow */
+  --SHADOW-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --SHADOW-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --SHADOW-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --SHADOW-4: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* ELEMENT STYLES */
+
+body {
+  background-color: var(--BACKGROUND-COLOUR);
+  color: var(--GREY-900);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+  font-family: var(--BODY-FONT);
+  color: var(--TEXT-COLOUR);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.35rem;
+  font-family: var(--HEADING-FONT);
+  font-weight: bold;
+  line-height: 1.3;
+  text-transform: capitalize;
+  color: var(--TEXT-COLOUR);
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-family: var(--HEADING-FONT);
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-family: var(--HEADING-FONT);
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-family: var(--HEADING-FONT);
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-family: var(--HEADING-FONT);
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-family: var(--HEADING-FONT);
+}
+
+small,
+text--small {
+  font-size: var(--SMALL-TEXT-SIZE);
+}
+
+/* LINK */
+a {
+  text-decoration: none;
+}
+
+/* LISTS */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* IMAGES */
