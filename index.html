@@ -69,5 +69,54 @@
       <li><p>Second Item</p></li>
       <li><p>Third Item</p></li>
     </ul>
+
+    <!-- Image -->
+    <div class="image-container">
+      <img src="./computer.jpeg" class="image" alt="computer" />
+    </div>
+    <br />
+
+    <!-- Buttons -->
+    <button class="btn" type="button">Regular Button</button>
+    <button class="btn btn-hipster" type="button">Hipster Button</button>
+    <br />
+    <br />
+    <br />
+    <!-- FORM -->
+    <div class="alert alert-danger">Invalid Password</div>
+    <div class="alert alert-success">Success!</div>
+    <form action="" class="form">
+      <h4>Contact Form</h4>
+      <div class="form-row">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+          class="form-input"
+        />
+        <small class="form-alert">This field cannot be empty!</small>
+      </div>
+      <div class="form-row">
+        <label for="number" class="form-label">Number</label>
+        <input type="number" name="number" id="number" class="form-input" />
+      </div>
+      <div class="form-row">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" class="form-input" />
+      </div>
+      <div class="form-row">
+        <label for="text-area" class="form-label">Text Area</label>
+        <textarea
+          class="form-textarea"
+          name="textarea"
+          id="text-area"
+          placeholder="Leave us a message!"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-block">Submit</button>
+    </form>
+    <div class="loading"></div>
   </body>
 </html>
