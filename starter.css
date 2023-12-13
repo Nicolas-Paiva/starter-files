@@ -41,8 +41,8 @@
   --WHITE: #fff;
   --RED-LIGHT: #f8d7da;
   --RED-DARK: #842029;
-  --GREEN-LIGHT: #d1e7dd;
-  --GREEN-DARK: #0d653c;
+  --GREEN-LIGHT: #dcece4;
+  --GREEN-DARK: #064b2b;
 
   /* OTHER VARIABLES */
   --BACKGROUND-COLOUR: var(--GREY-50);
@@ -62,12 +62,16 @@
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-/* ELEMENT STYLES */
+/* ==================================== BODY ==================================== */
 
 body {
   background-color: var(--BACKGROUND-COLOUR);
   color: var(--GREY-900);
+  padding: 1rem;
+  font-family: var(--BODY-FONT);
 }
+
+/* ==================================== TEXT ==================================== */
 
 p {
   margin-bottom: 1.5rem;
@@ -120,15 +124,163 @@ text--small {
   font-size: var(--SMALL-TEXT-SIZE);
 }
 
-/* LINK */
+/* ==================================== LINK ==================================== */
 a {
   text-decoration: none;
 }
 
-/* LISTS */
+/* ==================================== LISTS ==================================== */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* ==================================== IMAGES ==================================== */
+
+.image-container {
+  width: 40vw;
+  border: 5px solid var(--BLACK);
+  border-radius: var(--BORDER-RADIUS);
+  max-width: var(--MAX-WIDTH);
+}
+
 /* IMAGES */
+/* The image class will depend on the parent container */
+.image {
+  width: 100%;
+  display: block;
+
+  /* In order to mantain the aspect ratio of the image */
+  object-fit: cover;
+}
+
+/* ==================================== BUTTONS ==================================== */
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: transparent;
+  padding: 0.375rem 0.75rem;
+
+  color: var(--WHITE);
+  background-color: var(--PRIMARY-500);
+  box-shadow: var(--SHADOW-1);
+  border-radius: var(--BORDER-RADIUS);
+
+  transition: var(--TRANSITION);
+
+  font-family: var(--BODY-FONT);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  letter-spacing: var(--LETTER-SPACING);
+}
+
+.btn:hover {
+  background-color: var(--PRIMARY-600);
+  box-shadow: var(--SHADOW-3);
+}
+
+.btn-hipster {
+  color: var(--PRIMARY-500);
+  background-color: var(--PRIMARY-100);
+  border: 1px solid var(--PRIMARY-500);
+}
+
+.btn-hipster:hover {
+  color: var(--WHITE);
+  background-color: var(--PRIMARY-500);
+}
+
+/* Used when we need a button that spans the whole width of the parent container */
+.btn-block {
+  width: 100%;
+}
+
+/* ==================================== ALERTS ==================================== */
+
+.alert {
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-color: transparent;
+  border-radius: var(--BORDER-RADIUS);
+}
+
+.alert-danger {
+  color: var(--RED-DARK);
+  background-color: var(--RED-LIGHT);
+}
+
+.alert-success {
+  color: var(--GREEN-DARK);
+  background-color: var(--GREEN-LIGHT);
+}
+
+/* ==================================== FORM ==================================== */
+
+/* Here we will center the form without specifying a parent container */
+.form {
+  width: 90vw;
+  max-width: var(--FIXED-WIDTH);
+  padding: 2rem 2.5rem;
+
+  margin: 2rem auto;
+
+  box-shadow: var(--SHADOW-4);
+  background-color: var(--WHITE);
+  border-radius: var(--BORDER-RADIUS);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.275rem 0.75rem;
+
+  border-radius: var(--BORDER-RADIUS);
+  border: 1px solid var(--GREY-200);
+  background-color: var(--BACKGROUND-COLOUR);
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-textarea {
+  height: 5rem;
+}
+
+/* Because some browsers do not automatically inherit the fonts from the body */
+::placeholder {
+  font-family: inherit;
+}
+
+.form-alert {
+  color: var(--RED-DARK);
+  letter-spacing: var(--LETTER-SPACING);
+  text-transform: capitalize;
+}
+
+/* ==================================== ALERT ==================================== */
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--PRIMARY-300);
+  border-top: 5px solid var(--PRIMARY-500);
+  border-radius: 50%;
+  margin: 0 auto;
+
+  animation: loadingSpinner 0.8s linear infinite;
+}
+
+@keyframes loadingSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
